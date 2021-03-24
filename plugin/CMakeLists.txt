@@ -15,6 +15,7 @@
 #
 add_custom_target(plugin)
 
+# set(CMAKE_BUILD_TYPE Debug)
 set(TARGET_NAME nvinfer_plugin)
 set(SHARED_TARGET ${TARGET_NAME})
 set(STATIC_TARGET ${TARGET_NAME}_static)
@@ -55,6 +56,7 @@ set(PLUGIN_LISTS
     resizeNearestPlugin
     specialSlicePlugin
     splitPlugin
+    scatterNDPlugin
     )
 
 # Add BERT sources if ${BERT_GENCODES} was populated
@@ -96,6 +98,10 @@ list(APPEND PLUGIN_SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/../samples/common/logger
 add_library(${SHARED_TARGET} SHARED
     ${PLUGIN_SOURCES}
 )
+
+message("---------------------------------")
+message("plugin cu sources" ${PLUGIN_SOURCES})
+message("")
 
 target_include_directories(${SHARED_TARGET}
     PUBLIC ${PROJECT_SOURCE_DIR}/include

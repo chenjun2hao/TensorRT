@@ -53,6 +53,7 @@ using namespace nvinfer1::plugin;
 #include "resizeNearestPlugin.h"
 #include "specialSlicePlugin.h"
 #include "split.h"
+#include "trt_scatternd.hpp"
 
 using nvinfer1::plugin::RPROIParams;
 
@@ -188,6 +189,7 @@ extern "C"
         initializePlugin<nvinfer1::plugin::RPROIPluginCreator>(logger, libNamespace);
         initializePlugin<nvinfer1::plugin::SpecialSlicePluginCreator>(logger, libNamespace);
         initializePlugin<nvinfer1::plugin::SplitPluginCreator>(logger, libNamespace);
+        initializePlugin<nvinfer1::plugin::ONNXScatterNDDynamicCreator>(logger, libNamespace);
         return true;
     }
 } // extern "C"
