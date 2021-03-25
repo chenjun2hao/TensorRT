@@ -99,10 +99,6 @@ add_library(${SHARED_TARGET} SHARED
     ${PLUGIN_SOURCES}
 )
 
-message("---------------------------------")
-message("plugin cu sources" ${PLUGIN_SOURCES})
-message("")
-
 target_include_directories(${SHARED_TARGET}
     PUBLIC ${PROJECT_SOURCE_DIR}/include
     PUBLIC ${CUB_ROOT_DIR}
