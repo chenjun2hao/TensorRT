@@ -15,7 +15,7 @@
 #
 add_custom_target(plugin)
 
-# set(CMAKE_BUILD_TYPE Debug)
+set(CMAKE_BUILD_TYPE Debug)
 set(TARGET_NAME nvinfer_plugin)
 set(SHARED_TARGET ${TARGET_NAME})
 set(STATIC_TARGET ${TARGET_NAME}_static)
@@ -57,6 +57,7 @@ set(PLUGIN_LISTS
     specialSlicePlugin
     splitPlugin
     scatterNDPlugin
+    gridSamplerPlugin
     )
 
 # Add BERT sources if ${BERT_GENCODES} was populated

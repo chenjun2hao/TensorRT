@@ -167,6 +167,8 @@ const char *ONNXScatterNDDynamic::getPluginNamespace() const {
   return mNamespace.c_str();
 }
 
+
+
 ////////////////////// creator /////////////////////////////
 
 ONNXScatterNDDynamicCreator::ONNXScatterNDDynamicCreator() {

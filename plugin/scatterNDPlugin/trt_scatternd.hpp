@@ -73,6 +73,8 @@ class ONNXScatterNDDynamic : public nvinfer1::IPluginV2DynamicExt {
   using nvinfer1::IPluginV2DynamicExt::supportsFormat;
 };
 
+
+/////////////////////////// creator ///////////////////////////////////////
 class ONNXScatterNDDynamicCreator : public nvinfer1::IPluginCreator {
  public:
   ONNXScatterNDDynamicCreator();
